@@ -1,0 +1,21 @@
+{
+  "name": "vebinar",
+  "version": "1.0.0",
+  "description": "The test telegram bot vebinar",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Tolibjonfayz",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "franc": "^6.2.0",
+    "google-translate-api-x": "^10.6.8",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3",
+    "telegraf": "^4.15.3"
+  }
+}

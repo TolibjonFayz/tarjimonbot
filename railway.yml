@@ -1,0 +1,11 @@
+plugins:
+  - name: "@railway/static-build"
+    version: 1
+
+build:
+  env:
+    NODE_ENV: production
+  command: npm install
+
+start:
+  command: npm start
