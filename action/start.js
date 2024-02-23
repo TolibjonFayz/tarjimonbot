@@ -11,6 +11,7 @@ bot.start(async (ctx) => {
       [Markup.button.callback("O'zbek tili 🇺🇿", "uzb")],
     ])
   );
+
   try {
     const newUser = {
       userid: ctx.from.id,
