@@ -6,7 +6,11 @@ bot.help((ctx) => {
     `Bizning botimizda bajarish mumkin bo'lgan komandalar:\n` +
     `/start - botni ishga tushiruvchi buyruq \n` +
     `/info - botni ishlatish haqida ma'lumot`;
-  ctx.replyWithHTML(text);
+  try {
+    ctx.replyWithHTML(text);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 bot.command("info", async (ctx) => {
