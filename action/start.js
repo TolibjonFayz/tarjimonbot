@@ -3,14 +3,14 @@ const User = require("../db/User");
 const { Markup } = require("telegraf");
 
 bot.start(async (ctx) => {
-  // ctx.replyWithHTML(
-  //   "Assalomu Alaykum, tilni tanlang:",
-  //   Markup.inlineKeyboard([
-  //     [Markup.button.callback("Ingliz tili 🇺🇸", "english")],
-  //     [Markup.button.callback("Rus tili 🇷🇺", "russian")],
-  //     [Markup.button.callback("O'zbek tili 🇺🇿", "uzb")],
-  //   ])
-  // );
+  ctx.replyWithHTML(
+    "Assalomu Alaykum, tilni tanlang:",
+    Markup.inlineKeyboard([
+      [Markup.button.callback("Ingliz tili 🇺🇸", "english")],
+      [Markup.button.callback("Rus tili 🇷🇺", "russian")],
+      [Markup.button.callback("O'zbek tili 🇺🇿", "uzb")],
+    ])
+  );
   try {
     const newUser = {
       userid: ctx.from.id,

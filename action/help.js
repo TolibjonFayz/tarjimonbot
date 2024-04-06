@@ -2,15 +2,15 @@ const { bot } = require("../core/bot");
 const UserLang = require("../db/Language");
 
 bot.help((ctx) => {
-  // let text =
-  //   `Bizning botimizda bajarish mumkin bo'lgan komandalar:\n` +
-  //   `/start - botni ishga tushiruvchi buyruq \n` +
-  //   `/info - botni ishlatish haqida ma'lumot`;
-  // try {
-  //   ctx.replyWithHTML(text);
-  // } catch (err) {
-  //   console.log(err);
-  // }
+  let text =
+    `Bizning botimizda bajarish mumkin bo'lgan komandalar:\n` +
+    `/start - botni ishga tushiruvchi buyruq \n` +
+    `/info - botni ishlatish haqida ma'lumot`;
+  try {
+    ctx.replyWithHTML(text);
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 bot.command("info", async (ctx) => {
