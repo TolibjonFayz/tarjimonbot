@@ -13,6 +13,7 @@ bot.start(async (ctx) => {
       ])
     );
   } catch (err) {
+    console.log(ctx.from.first_name);
     console.log(err);
   }
 
@@ -35,7 +36,7 @@ bot.start(async (ctx) => {
         })
         .catch((err) => console.log(err));
     } else {
-      console.log("Eski user start bosdi");
+      console.log("Eski user start bosdi", newUser.userid);
     }
   } catch (err) {
     console.log(err);
