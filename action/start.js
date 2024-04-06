@@ -3,16 +3,15 @@ const User = require("../db/User");
 const { Markup } = require("telegraf");
 
 bot.start(async (ctx) => {
+  ctx.replyWithHTML(
+    "Assalomu Alaykum, tilni tanlang:",
+    Markup.inlineKeyboard([
+      [Markup.button.callback("Ingliz tili 🇺🇸", "english")],
+      [Markup.button.callback("Rus tili 🇷🇺", "russian")],
+      [Markup.button.callback("O'zbek tili 🇺🇿", "uzb")],
+    ])
+  );
   try {
-    ctx.replyWithHTML(
-      "Assalomu Alaykum, tilni tanlang:",
-      Markup.inlineKeyboard([
-        [Markup.button.callback("Ingliz tili 🇺🇸", "english")],
-        [Markup.button.callback("Rus tili 🇷🇺", "russian")],
-        [Markup.button.callback("O'zbek tili 🇺🇿", "uzb")],
-      ])
-    );
-
     const newUser = {
       userid: ctx.from.id,
       username: ctx.from.username,
@@ -31,7 +30,7 @@ bot.start(async (ctx) => {
         })
         .catch((err) => console.log(err));
     } else {
-      console.log("Eski user start bosdi", newUser.userid);
+      console.log("Eski user start bosdi");
     }
   } catch (err) {
     console.log(err);
