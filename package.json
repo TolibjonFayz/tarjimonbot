@@ -11,6 +11,7 @@
   "author": "Tolibjonfayz",
   "license": "MIT",
   "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.0",
     "dotenv": "^16.4.1",
     "franc": "^6.2.0",
     "google-translate-api-x": "^10.6.8",

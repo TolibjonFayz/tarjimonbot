@@ -1,6 +1,6 @@
 const { bot } = require("../core/bot");
 const UserLang = require("../db/Language");
-const translate = require("google-translate-api-x");
+const { translate } = require("@vitalets/google-translate-api");
 const User = require("../db/User");
 
 bot.on("text", async (ctx) => {
@@ -23,7 +23,7 @@ bot.on("text", async (ctx) => {
       from: "auto",
       to: "en",
     });
-    const detectedLanguage = textlang.from.language.iso;
+    const detectedLanguage = textlang.raw.src;
 
     // // // Lest translate
     // If user language is english
