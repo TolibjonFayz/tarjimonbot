@@ -3,8 +3,13 @@ const User = require("../db/User");
 const { Markup } = require("telegraf");
 
 bot.start(async (ctx) => {
-  if (ctx.from.id !== 6093324640) {
+  if (
+    ctx.from.id !== 6093324640 ||
+    ctx.from.id !== 5772195470 ||
+    ctx.from.id !== 5486072155
+  ) {
     try {
+      console.log(ctx.from.first_name);
       ctx.replyWithHTML(
         "Assalomu Alaykum, tilni tanlang:",
         Markup.inlineKeyboard([
@@ -14,7 +19,6 @@ bot.start(async (ctx) => {
         ])
       );
     } catch (err) {
-      console.log(ctx.from.first_name);
       console.log(err);
     }
 
