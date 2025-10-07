@@ -1,5 +1,4 @@
 const { bot } = require("../core/bot");
-const UserLang = require("../db/Language");
 
 bot.help((ctx) => {
   let text =
