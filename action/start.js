@@ -35,6 +35,6 @@ bot.start(async (ctx) => {
   } catch (err) {
     console.log(err);
     ctx.replyWithHTML(`<b>Ko'zda tutilmagan xatolik</b>`);
-    console.log(`<b>Ko'zda tutilmagan xatolik</b> \n ${err}`);
+    console.log(`<b>Ko'zda tutilmagan xatolik </b> \n ${err}`);
   }
 });
